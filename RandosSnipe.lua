@@ -211,10 +211,10 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
 	    elseif class == "Enchant" and item == "Massive Comet" and gems <= 10000000 then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp)
                 return
-	    elseif class == "Enchant" and item == "Super Lightning" and gems <= 100000 then
+	    elseif class == "Enchant" and item == "Super Lightning" and gems <= 10000 then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp)
                 return
-	    elseif class == "Enchant" and item == "Shiny Hunter" and gems <= 1000000 then
+	    elseif class == "Enchant" and item == "Shiny Hunter" and gems <= 100000 then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp)
                 return
             end
