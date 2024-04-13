@@ -252,19 +252,7 @@ end
 if PlayerInServer < 30 then
     while task.wait(10) do
         jumpToServer()
-    end
-end
-
-for i = 1, PlayerInServer do
-    for ii = 1,#alts do
-        if getPlayers[i].Name == alts[ii] and alts[ii] ~= Players.LocalPlayer.Name then
-            while task.wait(10) do
-                jumpToServer()
-            end
-        end
-    end
-end
-
+	end		
 Players.PlayerRemoving:Connect(function(player)
     getPlayers = Players:GetPlayers()
     PlayerInServer = #getPlayers
@@ -274,19 +262,8 @@ Players.PlayerRemoving:Connect(function(player)
         end
     end
 end) 
-
-Players.PlayerAdded:Connect(function(player)
-    for i = 1,#alts do
-        if player.Name == alts[i] and alts[i] ~= Players.LocalPlayer.Name then
-            task.wait(math.random(0, 60))
-            while task.wait(10) do
-                jumpToServer()
-            end
-        end
-    end
-end) 
-
-local hopDelay = math.random(720, 1000)
+	
+local hopDelay = math.random(500, 720)
 
 while task.wait(1) do
     if math.floor(os.clock() - osclock) >= hopDelay then
